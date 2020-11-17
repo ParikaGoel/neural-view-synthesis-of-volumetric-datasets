@@ -1,0 +1,12 @@
+# Model parameters.
+model_name: "NeRF"
+# Number of output channels
+input_ch: 3
+output_ch: 4
+# Number of layers in the model.
+num_layers: 6
+# Number of hidden units in each layer of the MLP (multi-layer
+# perceptron).
+hidden_size: 128
+# Skip connection
+skip_connect: [4]

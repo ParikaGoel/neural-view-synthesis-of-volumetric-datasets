@@ -1,0 +1,15 @@
+# To uniquely identify data
+dataset_name: lego
+# Base directory of dataset.
+datadir: /home/goel/Thesis/Data/nerf_synthetic/lego_1
+half_res: True
+# Near clip plane (clip all depth values closer than this threshold).
+near: 2.0
+# Far clip plane (clip all depth values farther than this threshold).
+far: 6.0
+# Whether to render models using a white background.
+white_bkgd: False
+# required if res changes
+camera_angle_x: 0.6911112070083618
+n_samples: 5
+chunksize: 160000

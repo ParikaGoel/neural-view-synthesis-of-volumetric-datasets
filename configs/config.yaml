@@ -1,0 +1,7 @@
+defaults:
+  - data: ejecta
+  - models: model1
+  - train: run32.0_256
+hydra:
+  run:
+    dir: ./outputs/ejecta/dvr/

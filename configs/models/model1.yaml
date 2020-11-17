@@ -1,0 +1,11 @@
+# Model parameters.
+model_name: "ConvNet"
+# Number of output channels
+output_ch: 3
+# Number of layers in the model.
+num_layers: 8
+# Number of hidden units in each layer of the MLP (multi-layer
+# perceptron).
+hidden_size: 128
+# Skip connection
+skip_connect: [4]

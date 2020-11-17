@@ -1,0 +1,57 @@
+# Summary of the experiment to write in tensorboard
+text_summary: "NeRF approach: Trained on 3D points and view directions. Input generated on sphere of radius 1.0. Loss Function: mse"
+
+# Path to load saved checkpoint from
+checkpoint: ""
+# Random seed for experimentation
+randomseed: 42
+# Number of images to process in each batch
+batch_size: 1
+# Number of training epochs.
+max_epochs: 200
+# Print progress after every n epochs
+print_every: 100
+# Save model after every n epochs
+save_every: 30
+# Save visualizations
+save_vis: True
+
+# Dataset config
+points_type: "cartesian"
+# Additionally use viewing directions as input.
+use_viewdirs: True
+# Viewing Direction type
+viewdir_type: "cartesian"
+# Bounding volume type (sphere/cube)
+vol_type: "sphere"
+vol_params: [0.0, 0.0, 0.0, 1.0]
+# vol_type: "cube"
+# vol_params: [-1.0, -1.0, -1.0, 1.0, 1.0, 1.0]
+
+# Model config
+loss: 'mse'
+feature_mapping: 'gauss_32.0'
+map_points: True
+map_viewdirs: True
+mapping_size: 256
+
+
+# Optimizer params.
+optimizer:
+  # Learning rate.
+  lr: 1e-4
+  # Min learning rate : Learning rate should not go below this while scheduling
+  min_lr: 1e-4
+  weight_decay: 1e-5
+
+# Learning rate scheduler.
+scheduler:
+  # Steps after which to decay the learning rate
+  step_decay: 1000
+  # Factor by which to decay the learning rate
+  lr_decay: 0.5
+
+# This two parameters need to be specified only for nerf approach
+n_samples: 2
+# Total chunksize will be n_samples * n_points_in_batch
+n_points_in_batch: 160000

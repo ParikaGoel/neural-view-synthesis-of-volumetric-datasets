@@ -1,0 +1,5 @@
+# Model parameters.
+model_name: "Conv2Net"
+# Number of hidden units in each layer of the MLP (multi-layer
+# perceptron).
+hidden_size: 128

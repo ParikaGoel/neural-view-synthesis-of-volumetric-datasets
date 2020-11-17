@@ -1,0 +1,6 @@
+# To uniquely identify data
+dataset_name: shapenet
+# Base directory of dataset.
+datadir: /home/goel/Thesis/Data/shapenet/chair
+# Whether to render models using a white background.
+white_bkgd: False
